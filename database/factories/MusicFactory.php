@@ -14,7 +14,8 @@ class MusicFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->sentence(8, true),
+            'time' => $this->faker->numberBetween(60, 120)
         ];
     }
 }

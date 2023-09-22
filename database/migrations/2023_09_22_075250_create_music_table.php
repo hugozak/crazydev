@@ -12,12 +12,13 @@ class CreateMusicTable extends Migration
      * @return void
      */
     public function up()
-    {
+    {   
+        Schema::drop('music');
         Schema::create('music', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('titre');
-            $table->integer('duree');
-            $table->string('lien');
+            $table->id();
+            $table->string('title', 255);
+            $table->string('time');
+            $table->timestamps();
         });
     }
 
